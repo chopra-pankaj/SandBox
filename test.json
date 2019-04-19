@@ -1,0 +1,6 @@
+[
+  "item": {
+    projectname: "firstProject",
+    scm: "https://github.com/SeritAndrei/JenkinsGitTest.git"
+  }
+]
