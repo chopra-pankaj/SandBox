@@ -1,16 +1,6 @@
-import groovy.json.JsonSlurper
-import groovy.json.JsonBuilder
+def props = readJSON file: 'test.json'
 
-hudson.FilePath workspace = hudson.model.Executor.currentExecutor().getCurrentWorkspace()
-new File("${workspace}/test.json").write(new JsonBuilder(projects).toPrettyString())
-
-File f = new File("${workspace}/test.json")
-def slurper = new JsonSlurper()
-def jsonText = f.getText()
-println "jsonText ${jsonText}"
-projects = slurper.parseText( jsonText )
-
-projects.each {
+props.each {
   job("${it.projectname}") {
     scm {
       git("${it.scm}")
