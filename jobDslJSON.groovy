@@ -1,9 +1,9 @@
-def slurped = new JsonSlurper().parseText('"item": {
-    projectname: "firstProject",
-    scm: "https://github.com/SeritAndrei/JenkinsGitTest.git"
-  }')
+import groovy.json.*
 
-props.each {
+def reader = new java.io.FileReader("test.json") 
+def dslJobs = new JsonSlurper().parse(reader)
+
+dslJobs.item.each {
   job("${it.projectname}") {
     scm {
       git("${it.scm}")
