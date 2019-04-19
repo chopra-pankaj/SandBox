@@ -8,6 +8,7 @@ dslJobs.each {
   job("${it.projectname}") {
     steps {
       shell('echo $JOB_NAME')
+      shell('echo $BUILD_NUMBER')
     }
   }
 }
