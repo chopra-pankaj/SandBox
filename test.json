@@ -1,13 +1,11 @@
 [
   {
-    "item": {
-      "projectname": "firstProject"
-    },
-    "item": {
-      "projectname": "secondProject"
-    },
-    "item": {
-      "projectname": "thirdProject"
-    }
+    "projectname": "firstProject"
+  },
+  {
+    "projectname": "secondProject"
+  },
+  {
+    "projectname": "thirdProject"
   }
 ]
