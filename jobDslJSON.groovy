@@ -4,7 +4,7 @@ hudson.FilePath workspace = hudson.model.Executor.currentExecutor().getCurrentWo
 def reader = new java.io.FileReader("${workspace}/test.json") 
 def dslJobs = new JsonSlurper().parse(reader)
 
-dslJobs.item.each {
+dslJobs.each {
   job("${it.projectname}") {  
     steps {
       shell('echo $JOB_NAME')
