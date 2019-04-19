@@ -1,4 +1,7 @@
-def props = readJSON file: 'test.json'
+def slurped = new JsonSlurper().parseText('"item": {
+    projectname: "firstProject",
+    scm: "https://github.com/SeritAndrei/JenkinsGitTest.git"
+  }')
 
 props.each {
   job("${it.projectname}") {
