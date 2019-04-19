@@ -6,9 +6,6 @@ def dslJobs = new JsonSlurper().parse(reader)
 
 dslJobs.each {
   job("${it.projectname}") {
-    scm {
-      git("${it.scm}")
-    }
     steps {
       shell('echo $JOB_NAME')
     }
