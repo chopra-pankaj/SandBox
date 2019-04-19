@@ -1,3 +1,5 @@
+import groovy.json.JsonSlurper
+
 hudson.FilePath workspace = hudson.model.Executor.currentExecutor().getCurrentWorkspace()
 new File("${workspace}/test.json").write(new JsonBuilder(projects).toPrettyString())
 
