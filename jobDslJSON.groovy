@@ -8,5 +8,13 @@ println "jsonText ${jsonText}"
 projects = slurper.parseText( jsonText )
 
 projects.each {
-  println it.projectname
+  job("${it.projectname}") {
+    scm {
+      git("${it.scm}")
+    }
+    
+    steps {
+      shell("cat README.md")
+    }
+  }
 }
