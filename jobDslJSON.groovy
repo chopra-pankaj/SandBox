@@ -1,6 +1,7 @@
 import groovy.json.*
 
-def reader = new java.io.FileReader("test.json") 
+hudson.FilePath workspace = hudson.model.Executor.currentExecutor().getCurrentWorkspace()
+def reader = new java.io.FileReader("${workspace}/test.json") 
 def dslJobs = new JsonSlurper().parse(reader)
 
 dslJobs.item.each {
