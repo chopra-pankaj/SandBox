@@ -1,14 +1,14 @@
 [
     {
-      "projectname": "firstProject"
+      "projectname": "firstProject",
       "scm": "https://github.com/SeritAndrei/JenkinsGitTest.git"
     },
     {
-      "projectname": "secondProject"
+      "projectname": "secondProject",
       "scm": "https://github.com/SeritAndrei/JenkinsGitTest.git"
     },
     {
-      "projectname": "thirdProject"
+      "projectname": "thirdProject",
       "scm": "https://github.com/SeritAndrei/JenkinsGitTest.git"
     }
 ]
